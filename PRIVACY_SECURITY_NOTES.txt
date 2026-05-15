@@ -1,0 +1,16 @@
+Navigator Stable Demo — Privacy and Security Notes
+
+Local-first memory
+The app stores conversation, Twin Journal entries, Document Capsules, Field Scans, Context Assembly, Move Cards, comparison state, and Current Move Plans in the user's browser localStorage.
+
+User-controlled portability
+Users can export TXT, export JSON, import/restore JSON, delete saved items, and clear local memory.
+
+Document uploads
+Uploaded documents are used to create reviewable Document Capsules. The saved Navigator memory contains only the user-approved capsule, not the raw uploaded document text.
+
+Backend AI calls
+When the user asks the Twin to interpret, summarize, deliberate, create a capsule, or generate an AI-assisted response, selected prompt context is sent to the configured backend endpoint for processing. Users should avoid uploading highly sensitive material unless they understand this processing path.
+
+Current limitation
+This stable demo does not yet include a Navigator Private API or fully local/private model processing. Stronger privacy assurances would require a dedicated private API, no-retention policy, redaction layer, or local/private model deployment.
