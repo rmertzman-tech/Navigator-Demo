@@ -1,10 +1,9 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Navigator — Twin v2.8.1 Stable Release & PWA Preparation</title>
-  <meta name="description" content="Navigator Twin v2.8.1 Stable Release and PWA Preparation — packages the complete agency-navigation loop with release notes, demo data mode, privacy/security statement, and PWA readiness guidance; no service worker in this stable fallback build." />
+  <title>The Navigator — Twin v2.8.2 Stable Demo</title>
+  <meta name="description" content="Navigator Twin v2.8.2 Stable Demo — a polished, shareable demonstration release of the complete agency-navigation loop with demo data, release notes, privacy/security guidance, and PWA preparation notes; no service worker in this stable fallback build." />
   <style>
     :root {
       --void: #060b18;
@@ -611,9 +610,9 @@
   <main class="app-shell">
     <div class="topbar">
       <div>
-        <div class="eyebrow">Navigator Twin v2.8.1 Stable · Release & PWA Preparation</div>
+        <div class="eyebrow">Navigator Twin v2.8.2 Stable Demo · Agency Navigation Build</div>
         <h1>The Twin that becomes coherent by learning from you.</h1>
-        <div class="subtitle">This stable fallback build packages the full agency-navigation loop, adds release notes and demo data, and prepares the project for later PWA conversion without registering a service worker yet.</div>
+        <div class="subtitle">This stable demo release packages the full agency-navigation loop for reviewers and early users, includes fictional demo data, and remains a non-PWA fallback build so it can be tested without service-worker caching.</div>
       </div>
       <div class="status-cluster">
         <span class="pill"><span id="backend-dot" class="dot wait"></span><span id="backend-label">Backend not tested</span></span>
@@ -1038,11 +1037,24 @@
         <div class="workspace-stack">
         <div id="release-notes-card" class="card" style="margin-top:18px;">
           <div class="card-header">
-            <div class="eyebrow">Stable release package</div>
-            <div class="card-title">Navigator Twin v2.8.1 Stable — what this build is for</div>
-            <div class="card-desc">This is the clean non-PWA fallback build before service-worker conversion. It preserves the complete agency-navigation loop while adding release notes, demo data, privacy/security guidance, and a PWA readiness checklist.</div>
+            <div class="eyebrow">Stable demo release package</div>
+            <div class="card-title">Navigator Twin v2.8.2 Stable Demo — what this build is for</div>
+            <div class="card-desc">This is a polished, shareable, non-PWA demonstration build for reviewers, collaborators, instructors, and early users. It preserves the complete agency-navigation loop while adding clearer release notes, fictional demo data, privacy/security guidance, and a PWA readiness checklist.</div>
           </div>
           <div class="card-body">
+            <div class="help-section">
+              <h3>Reviewer Start Here</h3>
+              <ol>
+                <li>Open <strong>Home</strong> and read the guided workflow card.</li>
+                <li>Click <strong>Load Fictional Demo</strong> if you want to see the full system without creating your own scans first.</li>
+                <li>Visit <strong>Field Map</strong> to see how life-fields, Field Scans, and Context Assembly work together.</li>
+                <li>Visit <strong>Moves</strong> to see Move Cards, Cross-Field Move Comparison, Current Move selection, and Current Move Deliberation.</li>
+                <li>Return to <strong>Twin</strong> and ask the Twin what it sees in the demo case.</li>
+                <li>Use <strong>Memory</strong> to inspect Journal entries, Document Capsules, and export/import controls.</li>
+              </ol>
+              <p>This demo is designed to show the complete agency-navigation loop quickly. It is not meant to replace the user's own reflective process.</p>
+            </div>
+
             <div class="help-section">
               <h3>What Navigator does</h3>
               <p>Navigator helps a user talk with a Digital Twin, preserve memory through Journal entries and Document Capsules, map life-fields through Field Scans, assemble the combined context, generate possible Move Cards, compare moves across fields, and create a small Current Move Plan for deliberation.</p>
@@ -1058,14 +1070,26 @@
             </div>
             <div class="help-section">
               <h3>Privacy and security posture</h3>
-              <p><strong>Local-first by design:</strong> conversation, Journal entries, Document Capsules, Field Scans, Context Assembly, Move Cards, comparison state, and Current Move Plans are stored in this browser unless the user exports or restores them. Backend calls occur only when the user asks the Twin to interpret, summarize, deliberate, or create AI-assisted responses.</p>
-              <p><strong>User control:</strong> users can export JSON, export TXT, import/restore JSON, delete saved items, and clear local memory. Document uploads create reviewable capsules; the raw document text is not saved in local memory.</p>
+              <p><strong>Local-first by design:</strong> conversation, Journal entries, Document Capsules, Field Scans, Context Assembly, Move Cards, comparison state, and Current Move Plans are stored in this browser unless the user exports or restores them.</p>
+              <p><strong>Backend transparency:</strong> backend AI calls occur only when the user asks the Twin to interpret, summarize, deliberate, create a capsule, or generate an AI-assisted response. Those requests require sending selected prompt context to the configured backend service for processing. Users should avoid uploading highly sensitive material unless they understand that selected content may be sent for AI processing.</p>
+              <p><strong>User control:</strong> users can export JSON, export TXT, import/restore JSON, delete saved items, and clear local memory. Document uploads create reviewable capsules; the app saves only the capsule the user approves, not the raw uploaded document text.</p>
             </div>
             <div class="help-section">
               <h3>Sample / demo data mode</h3>
               <p>Use the fictional demo to show the full workflow quickly. It creates a sample Twin conversation, Journal, Document Capsule, three Field Scans, Context Assembly, Move Cards, a Current Move, and a Current Move Plan. It will replace local memory only after confirmation.</p>
               <div class="toolbar"><button class="btn small purple" type="button" onclick="loadDemoData()">Load Fictional Demo Data</button><button class="btn small ghost" type="button" onclick="exportTwinJournal('json')">Export Current JSON Backup</button></div>
             </div>
+            <div class="help-section">
+              <h3>Near-term roadmap after this stable demo</h3>
+              <ul>
+                <li><strong>PWA conversion:</strong> installable app shell with careful service-worker caching.</li>
+                <li><strong>Navigator Private API specification:</strong> dedicated privacy-minimizing endpoints for Twin, Capsules, Field Maps, Move Cards, and Coaches.</li>
+                <li><strong>PRF-22 / E-Twin import:</strong> optional profile import that seeds the Twin with a user-controlled ethical-perception baseline.</li>
+                <li><strong>Applications & Coaches:</strong> optional guided modules such as AAC&amp;U Critical Thinking Coach, Ethical Reasoning Coach, EBB Chapter Coaches, and Research Project Coach.</li>
+                <li><strong>Timeline and simulation layer:</strong> longer-term trajectory mapping, UCP-based scenario simulation, and agency-preserving planning over time.</li>
+              </ul>
+            </div>
+
             <div class="help-section">
               <h3>PWA readiness checklist</h3>
               <ul>
@@ -1102,8 +1126,8 @@
                 <li>Upload a document if you want the Twin to understand a project or research style.</li>
                 <li>Run a Field Scan if you want to map an environment such as school, work, family, finances, or research.</li>
                 <li>Generate Move Cards from saved Field Scans, then use <strong>Cross-Field Move Comparison</strong> to compare two to four possible moves.</li>
-                <li>Set one <strong>Current Move</strong>, then create a <strong>Current Move Plan</strong> that names the smallest first action, support needed, risk to watch, and check-back point.</li>
                 <li>Set one <strong>Current Move</strong> when you are ready to deliberate. Current does not mean final; it means “the move I am now considering.”</li>
+                <li>Create a <strong>Current Move Plan</strong> that names the smallest first action, support needed, risk to watch, non-sacrifice point, and check-back moment.</li>
                 <li>Export JSON before changing browsers, devices, or clearing memory.</li>
               </ol>
             </div>
@@ -1150,7 +1174,7 @@
               <label for="backend-url">Backend proxy endpoint</label>
               <input id="backend-url" type="text" value="https://ucp-backend-4dig.onrender.com/api/claude-proxy" onchange="saveBackendUrl(this.value)" />
             </div>
-            <div class="privacy-note">Stable fallback build: this version does not register a service worker and does not include PWA caching. Version: Navigator Twin v2.8.1 Stable Release and PWA Preparation Build.</div>
+            <div class="privacy-note">Stable demo fallback build: this version does not register a service worker and does not include PWA caching. Version: Navigator Twin v2.8.2 Stable Demo — Agency Navigation Build.</div>
           </div>
         </div>
         </aside>
@@ -1166,7 +1190,7 @@
 
   const ENABLE_PWA = false; // Core development build: keep false until Twin v2 is stable.
   const DEFAULT_BACKEND = 'https://ucp-backend-4dig.onrender.com/api/claude-proxy';
-  const APP_VERSION = 'Navigator Twin v2.8.1 Stable Release and PWA Preparation';
+  const APP_VERSION = 'Navigator Twin v2.8.2 Stable Demo — Agency Navigation Build';
 
   const KEYS = {
     chat: 'navigator_twin_v2_chat',
