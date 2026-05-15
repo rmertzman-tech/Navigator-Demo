@@ -1,0 +1,15 @@
+Navigator Stable Demo — PWA Readiness Checklist
+
+This release intentionally remains non-PWA. ENABLE_PWA is false and no service worker is registered.
+
+Before PWA conversion:
+1. Confirm index.html functions correctly as a stable fallback.
+2. Cache only the app shell and static assets.
+3. Do not cache backend AI/API calls.
+4. Do not cache raw uploaded document text.
+5. Preserve visible JSON export/import controls.
+6. Use versioned service-worker cache names.
+7. Provide a way to update stale service-worker caches.
+8. Test phone layout and laptop layout separately.
+9. Treat phone as capture/continuity and laptop as deep review/planning.
+10. Keep cross-device sync as a later optional encrypted feature, not part of the first PWA conversion.
