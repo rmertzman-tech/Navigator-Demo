@@ -1,0 +1,17 @@
+Navigator Twin v2.8.2 Stable Demo — Start Here Demo Guide
+
+Purpose
+This demo shows the complete agency-navigation loop without requiring a new user or reviewer to build a full personal profile from scratch.
+
+Quick demo path
+1. Open the app.
+2. On Home, click Load Fictional Demo. The app will ask before replacing local memory.
+3. Review the Home dashboard. Notice the guided workflow and readiness indicators.
+4. Open Field Map. Review the Field Map Dashboard, saved Field Scans, and Context Assembly.
+5. Open Moves. Review Move Cards, Cross-Field Move Comparison, Current Move, and Current Move Plan.
+6. Open Twin. Ask: "What does this demo user's Field Map suggest about their agency?"
+7. Open Memory. Review Twin Journal, Document Capsules, and backup controls.
+8. Export JSON if you want to preserve the demo state.
+
+Key interpretation
+Navigator does not choose for the user. It helps the user see self, memory, fields, context, possible moves, and a current move plan so deliberation becomes clearer.
